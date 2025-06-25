@@ -1,4 +1,3 @@
-
 export interface Player {
   id: number;
   name: string;
@@ -7,6 +6,10 @@ export interface Player {
   speciality: string;
   achievement: string;
   featured?: boolean;
+  socialMedia?: {
+    twitter?: string;
+    instagram?: string;
+  };
 }
 
 export const players: Player[] = [
@@ -18,7 +21,11 @@ export const players: Player[] = [
     formats: ["Test", "ODI"],
     speciality: "Master Blaster - Right-hand batsman",
     achievement: "100 international centuries, highest run scorer in cricket history",
-    featured: true
+    featured: true,
+    socialMedia: {
+      twitter: "https://twitter.com/sachin_rt",
+      instagram: "https://instagram.com/sachintendulkar"
+    }
   },
   {
     id: 2,
@@ -27,7 +34,11 @@ export const players: Player[] = [
     formats: ["Test", "ODI", "T20"],
     speciality: "Wicket-keeper batsman & Captain Cool",
     achievement: "Led India to 2007 T20 World Cup, 2011 World Cup victories",
-    featured: true
+    featured: true,
+    socialMedia: {
+      twitter: "https://twitter.com/msdhoni",
+      instagram: "https://instagram.com/mahi7781"
+    }
   },
   {
     id: 3,
@@ -36,7 +47,11 @@ export const players: Player[] = [
     formats: ["Test", "ODI", "T20"],
     speciality: "Right-hand batsman, aggressive captain",
     achievement: "Modern batting legend with 70+ international centuries",
-    featured: true
+    featured: true,
+    socialMedia: {
+      twitter: "https://twitter.com/imVkohli",
+      instagram: "https://instagram.com/virat.kohli"
+    }
   },
   {
     id: 4,
@@ -45,7 +60,11 @@ export const players: Player[] = [
     formats: ["Test", "ODI"],
     speciality: "All-rounder, fast bowler",
     achievement: "Led India to first World Cup victory in 1983",
-    featured: true
+    featured: true,
+    socialMedia: {
+      twitter: "https://twitter.com/therealkapildev",
+      instagram: "https://instagram.com/kapildev"
+    }
   },
   {
     id: 5,
@@ -54,7 +73,11 @@ export const players: Player[] = [
     formats: ["Test", "ODI"],
     speciality: "Opening batsman, technique master",
     achievement: "First to score 10,000 Test runs, 34 Test centuries",
-    featured: true
+    featured: true,
+    socialMedia: {
+      twitter: "https://twitter.com/gavaskarsunilm",
+      instagram: "https://instagram.com/gavaskarsunil"
+    }
   },
   {
     id: 6,
@@ -63,7 +86,11 @@ export const players: Player[] = [
     formats: ["Test", "ODI"],
     speciality: "Leg-spin bowler",
     achievement: "619 Test wickets, perfect 10 wickets in an innings",
-    featured: true
+    featured: true,
+    socialMedia: {
+      twitter: "https://twitter.com/anilkumble1074",
+      instagram: "https://instagram.com/anilkumble1074"
+    }
   },
 
   // 1950s-1960s Era
@@ -149,7 +176,11 @@ export const players: Player[] = [
     era: "1990s-2000s",
     formats: ["Test", "ODI"],
     speciality: "Right-hand batsman, 'The Wall'",
-    achievement: "13,288 Test runs, 36 Test centuries"
+    achievement: "13,288 Test runs, 36 Test centuries",
+    socialMedia: {
+      twitter: "https://twitter.com/dravidrahul",
+      instagram: "https://instagram.com/rahuldravid1"
+    }
   },
   {
     id: 17,
@@ -157,7 +188,11 @@ export const players: Player[] = [
     era: "1990s-2000s",
     formats: ["Test", "ODI"],
     speciality: "Left-hand batsman, captain",
-    achievement: "Transformed Indian cricket, aggressive leadership"
+    achievement: "Transformed Indian cricket, aggressive leadership",
+    socialMedia: {
+      twitter: "https://twitter.com/SGanguly99",
+      instagram: "https://instagram.com/souravganguly"
+    }
   },
   {
     id: 18,
@@ -165,7 +200,11 @@ export const players: Player[] = [
     era: "1990s-2000s",
     formats: ["Test", "ODI"],
     speciality: "Right-hand batsman, wristy stroke play",
-    achievement: "281 vs Australia in 2001, match-winner"
+    achievement: "281 vs Australia in 2001, match-winner",
+    socialMedia: {
+      twitter: "https://twitter.com/VVSLaxman281",
+      instagram: "https://instagram.com/vvslaxman281"
+    }
   },
   {
     id: 19,
@@ -191,7 +230,11 @@ export const players: Player[] = [
     era: "2000s-2010s",
     formats: ["Test", "ODI", "T20"],
     speciality: "All-rounder, left-hand batsman",
-    achievement: "2011 World Cup Player of Tournament, 6 sixes in T20"
+    achievement: "2011 World Cup Player of Tournament, 6 sixes in T20",
+    socialMedia: {
+      twitter: "https://twitter.com/YUVSTRONG12",
+      instagram: "https://instagram.com/yuvisofficial"
+    }
   },
   {
     id: 22,
@@ -199,7 +242,11 @@ export const players: Player[] = [
     era: "2000s-2010s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Off-spin bowler",
-    achievement: "417 Test wickets, hat-trick vs Australia"
+    achievement: "417 Test wickets, hat-trick vs Australia",
+    socialMedia: {
+      twitter: "https://twitter.com/harbhajan_singh",
+      instagram: "https://instagram.com/harbhajan3"
+    }
   },
   {
     id: 23,
@@ -207,7 +254,11 @@ export const players: Player[] = [
     era: "2000s-2010s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Left-arm fast bowler",
-    achievement: "311 Test wickets, 2011 World Cup star"
+    achievement: "311 Test wickets, 2011 World Cup star",
+    socialMedia: {
+      twitter: "https://twitter.com/ImZaheer",
+      instagram: "https://instagram.com/zaheer_khan34"
+    }
   },
   {
     id: 24,
@@ -215,7 +266,11 @@ export const players: Player[] = [
     era: "2000s-2010s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Opening batsman, aggressive stroke play",
-    achievement: "Two triple centuries in Tests, fastest 300"
+    achievement: "Two triple centuries in Tests, fastest 300",
+    socialMedia: {
+      twitter: "https://twitter.com/virendersehwag",
+      instagram: "https://instagram.com/virendersehwag"
+    }
   },
   {
     id: 25,
@@ -223,7 +278,11 @@ export const players: Player[] = [
     era: "2000s-2010s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Left-hand opening batsman",
-    achievement: "Match-winner in 2007 T20 & 2011 World Cup finals"
+    achievement: "Match-winner in 2007 T20 & 2011 World Cup finals",
+    socialMedia: {
+      twitter: "https://twitter.com/GautamGambhir",
+      instagram: "https://instagram.com/gautamgambhir"
+    }
   },
 
   // 2010s-Present Era
@@ -233,7 +292,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Right-hand batsman, captain",
-    achievement: "Three double centuries in ODIs, 'Hitman' of cricket"
+    achievement: "Three double centuries in ODIs, 'Hitman' of cricket",
+    socialMedia: {
+      twitter: "https://twitter.com/ImRo45",
+      instagram: "https://instagram.com/rohitsharma45"
+    }
   },
   {
     id: 27,
@@ -241,7 +304,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Left-hand opening batsman",
-    achievement: "Fastest Test century on debut, ICC tournament specialist"
+    achievement: "Fastest Test century on debut, ICC tournament specialist",
+    socialMedia: {
+      twitter: "https://twitter.com/SDhawan25",
+      instagram: "https://instagram.com/shikhardofficial"
+    }
   },
   {
     id: 28,
@@ -249,7 +316,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Off-spin bowler, all-rounder",
-    achievement: "400+ Test wickets, multiple Player of Series awards"
+    achievement: "400+ Test wickets, multiple Player of Series awards",
+    socialMedia: {
+      twitter: "https://twitter.com/ashwinravi99",
+      instagram: "https://instagram.com/rashwin99"
+    }
   },
   {
     id: 29,
@@ -257,7 +328,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Fast bowler, unique action",
-    achievement: "Fastest to 100 ODI wickets, yorker specialist"
+    achievement: "Fastest to 100 ODI wickets, yorker specialist",
+    socialMedia: {
+      twitter: "https://twitter.com/Jaspritbumrah93",
+      instagram: "https://instagram.com/jaspritb1"
+    }
   },
   {
     id: 30,
@@ -265,7 +340,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Right-hand batsman, wicket-keeper",
-    achievement: "Versatile batsman across all formats"
+    achievement: "Versatile batsman across all formats",
+    socialMedia: {
+      twitter: "https://twitter.com/klrahul11",
+      instagram: "https://instagram.com/klrahul"
+    }
   },
 
   // Additional Notable Players
@@ -275,7 +354,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "All-rounder, left-arm spinner",
-    achievement: "Triple threat - batting, bowling, fielding excellence"
+    achievement: "Triple threat - batting, bowling, fielding excellence",
+    socialMedia: {
+      twitter: "https://twitter.com/imjadeja",
+      instagram: "https://instagram.com/ravindrajadeja"
+    }
   },
   {
     id: 32,
@@ -283,7 +366,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["ODI", "T20"],
     speciality: "All-rounder, fast bowler",
-    achievement: "T20 World Cup 2024 winner, explosive lower-order batsman"
+    achievement: "T20 World Cup 2024 winner, explosive lower-order batsman",
+    socialMedia: {
+      twitter: "https://twitter.com/hardikpandya7",
+      instagram: "https://instagram.com/hardikpandya93"
+    }
   },
   {
     id: 33,
@@ -291,7 +378,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI"],
     speciality: "Fast bowler",
-    achievement: "200+ Test wickets, reverse swing expert"
+    achievement: "200+ Test wickets, reverse swing expert",
+    socialMedia: {
+      twitter: "https://twitter.com/MdShami11",
+      instagram: "https://instagram.com/mdshami.official"
+    }
   },
   {
     id: 34,
@@ -317,7 +408,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Wicket-keeper batsman",
-    achievement: "Game-changing knocks in Australia and England"
+    achievement: "Game-changing knocks in Australia and England",
+    socialMedia: {
+      twitter: "https://twitter.com/RishabhPant17",
+      instagram: "https://instagram.com/rishabpant"
+    }
   },
   {
     id: 37,
@@ -325,7 +420,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test"],
     speciality: "Right-hand batsman, Test specialist",
-    achievement: "Hero of 2018-19 Australia series, solid technique"
+    achievement: "Hero of 2018-19 Australia series, solid technique",
+    socialMedia: {
+      twitter: "https://twitter.com/cheteshwar1",
+      instagram: "https://instagram.com/cheteshwarpujara"
+    }
   },
   {
     id: 38,
@@ -333,7 +432,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI"],
     speciality: "Right-hand batsman, vice-captain",
-    achievement: "Overseas specialist, calm under pressure"
+    achievement: "Overseas specialist, calm under pressure",
+    socialMedia: {
+      twitter: "https://twitter.com/ajinkyarahane88",
+      instagram: "https://instagram.com/ajirahane"
+    }
   },
   {
     id: 39,
@@ -341,7 +444,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Fast bowler",
-    achievement: "Breakthrough performer, consistent line and length"
+    achievement: "Breakthrough performer, consistent line and length",
+    socialMedia: {
+      twitter: "https://twitter.com/mdsirajofficial",
+      instagram: "https://instagram.com/mdsirajofficial"
+    }
   },
   {
     id: 40,
@@ -359,7 +466,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["ODI", "T20"],
     speciality: "Right-hand batsman, T20 specialist",
-    achievement: "360-degree batsman, T20 world rankings leader"
+    achievement: "360-degree batsman, T20 world rankings leader",
+    socialMedia: {
+      twitter: "https://twitter.com/surya_14kumar",
+      instagram: "https://instagram.com/suryakumaryadav"
+    }
   },
   {
     id: 42,
@@ -367,7 +478,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["ODI", "T20"],
     speciality: "Wicket-keeper batsman",
-    achievement: "Explosive opener, IPL success"
+    achievement: "Explosive opener, IPL success",
+    socialMedia: {
+      twitter: "https://twitter.com/ishankishan51",
+      instagram: "https://instagram.com/ishankishan23"
+    }
   },
   {
     id: 43,
@@ -375,7 +490,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Right-hand batsman, captain",
-    achievement: "Consistent middle-order performer, leadership qualities"
+    achievement: "Consistent middle-order performer, leadership qualities",
+    socialMedia: {
+      twitter: "https://twitter.com/ShreyasIyer15",
+      instagram: "https://instagram.com/shreyas41"
+    }
   },
   {
     id: 44,
@@ -391,7 +510,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["ODI", "T20"],
     speciality: "Leg-spin bowler",
-    achievement: "Leading wicket-taker in T20Is, wicket-taking ability"
+    achievement: "Leading wicket-taker in T20Is, wicket-taking ability",
+    socialMedia: {
+      twitter: "https://twitter.com/yuzi_chahal",
+      instagram: "https://instagram.com/yuzi_chahal23"
+    }
   },
 
   // Emerging Talents
@@ -401,7 +524,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI", "T20"],
     speciality: "Right-hand batsman, opener",
-    achievement: "Rising star, elegant stroke play, future captain material"
+    achievement: "Rising star, elegant stroke play, future captain material",
+    socialMedia: {
+      twitter: "https://twitter.com/ShubmanGill",
+      instagram: "https://instagram.com/shubmangill"
+    }
   },
   {
     id: 47,
@@ -409,7 +536,11 @@ export const players: Player[] = [
     era: "2010s-2020s",
     formats: ["Test", "ODI"],
     speciality: "Right-hand opening batsman",
-    achievement: "Century on Test debut, aggressive opener"
+    achievement: "Century on Test debut, aggressive opener",
+    socialMedia: {
+      twitter: "https://twitter.com/PrithviShaw",
+      instagram: "https://instagram.com/prithvishaw"
+    }
   },
   {
     id: 48,

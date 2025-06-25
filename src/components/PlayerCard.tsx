@@ -1,7 +1,8 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, Trophy, Calendar } from "lucide-react";
+import { Star, Trophy, Calendar, ExternalLink } from "lucide-react";
+import { Instagram, X } from "lucide-react";
 
 interface Player {
   id: number;
@@ -11,6 +12,10 @@ interface Player {
   speciality: string;
   achievement: string;
   featured?: boolean;
+  socialMedia?: {
+    twitter?: string;
+    instagram?: string;
+  };
 }
 
 interface PlayerCardProps {
@@ -18,6 +23,11 @@ interface PlayerCardProps {
 }
 
 const PlayerCard = ({ player }: PlayerCardProps) => {
+  const handleNameClick = () => {
+    const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(player.name + ' cricket biography')}`;
+    window.open(googleSearchUrl, '_blank');
+  };
+
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg overflow-hidden">
       <div className="relative">
@@ -47,14 +57,46 @@ const PlayerCard = ({ player }: PlayerCardProps) => {
         <CardContent className="p-6">
           <div className="space-y-4">
             <div>
-              <h3 className="text-xl font-bold text-green-800 group-hover:text-green-600 transition-colors">
+              <h3 
+                className="text-xl font-bold text-green-800 group-hover:text-green-600 transition-colors cursor-pointer hover:underline flex items-center gap-2"
+                onClick={handleNameClick}
+              >
                 {player.name}
+                <ExternalLink className="h-4 w-4" />
               </h3>
               <p className="text-gray-600 text-sm flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
                 {player.era}
               </p>
             </div>
+
+            {/* Social Media Links */}
+            {player.socialMedia && (
+              <div className="flex gap-3">
+                {player.socialMedia.twitter && (
+                  <a
+                    href={player.socialMedia.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:text-blue-700 transition-colors"
+                    title="Follow on X (Twitter)"
+                  >
+                    <X className="h-5 w-5" />
+                  </a>
+                )}
+                {player.socialMedia.instagram && (
+                  <a
+                    href={player.socialMedia.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-500 hover:text-pink-700 transition-colors"
+                    title="Follow on Instagram"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                )}
+              </div>
+            )}
 
             <div className="flex flex-wrap gap-2">
               {player.formats.map((format) => (
