@@ -19,6 +19,51 @@ const PhotoGallery = () => {
     },
     {
       id: 2,
+      title: "2011 Cricket World Cup Victory",
+      category: "historic",
+      year: "2011",
+      location: "Mumbai, India",
+      description: "MS Dhoni's iconic six that brought the World Cup home after 28 years",
+      imageUrl: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e"
+    },
+    {
+      id: 3,
+      title: "2020-21 Border-Gavaskar Trophy Victory in Australia",
+      category: "historic",
+      year: "2021",
+      location: "Australia",
+      description: "Historic series win in Australia despite injuries and setbacks",
+      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96"
+    },
+    {
+      id: 4,
+      title: "2024 T20 World Cup Victory",
+      category: "historic",
+      year: "2024",
+      location: "Barbados",
+      description: "India's second T20 World Cup triumph after 17 years",
+      imageUrl: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e"
+    },
+    {
+      id: 5,
+      title: "Yuvraj Singh's Six Sixes in an Over (2007)",
+      category: "action",
+      year: "2007",
+      location: "Durban, South Africa",
+      description: "Yuvraj Singh's legendary six sixes in one over against England",
+      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96"
+    },
+    {
+      id: 6,
+      title: "Sachin Tendulkar's 100th International Century (2012)",
+      category: "action",
+      year: "2012",
+      location: "Dhaka, Bangladesh",
+      description: "The Master Blaster's historic 100th international century",
+      imageUrl: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e"
+    },
+    {
+      id: 7,
       title: "Cricket Stadium Atmosphere",
       category: "stadiums",
       year: "2023",
@@ -27,7 +72,7 @@ const PhotoGallery = () => {
       imageUrl: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e"
     },
     {
-      id: 3,
+      id: 8,
       title: "Modern Cricket Action",
       category: "action",
       year: "2024",
@@ -36,7 +81,7 @@ const PhotoGallery = () => {
       imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96"
     },
     {
-      id: 4,
+      id: 9,
       title: "Cricket Equipment Evolution",
       category: "equipment",
       year: "1950-2024",
@@ -45,7 +90,7 @@ const PhotoGallery = () => {
       imageUrl: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e"
     },
     {
-      id: 5,
+      id: 10,
       title: "Team India Celebrations",
       category: "celebrations",
       year: "2011",
@@ -54,7 +99,7 @@ const PhotoGallery = () => {
       imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96"
     },
     {
-      id: 6,
+      id: 11,
       title: "Cricket Training Grounds",
       category: "training",
       year: "2023",
