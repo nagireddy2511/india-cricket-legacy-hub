@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/348aad4e-cda8-4ae7-a09f-164f7260a65f
+**URL**: https://preview--india-cricket-legacy-hub.lovable.app/
 
 ## How can I edit this code?
 
