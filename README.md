@@ -62,7 +62,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/348aad4e-cda8-4ae7-a09f-164f7260a65f) and click on Share -> Publish.
+Simply open [Lovable](https://preview--india-cricket-legacy-hub.lovable.app/) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
