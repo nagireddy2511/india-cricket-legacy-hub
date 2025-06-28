@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Trophy } from "lucide-react";
+import { Calendar, MapPin, Trophy, ExternalLink } from "lucide-react";
 
 const PhotoGallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -76,6 +76,12 @@ const PhotoGallery = () => {
     ? galleryItems 
     : galleryItems.filter(item => item.category === selectedCategory);
 
+  const handleItemClick = (item: typeof galleryItems[0]) => {
+    const searchQuery = `${item.title} ${item.year} cricket`;
+    const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+    window.open(googleSearchUrl, '_blank');
+  };
+
   return (
     <section id="gallery-section" className="py-16 bg-gradient-to-b from-white to-green-50">
       <div className="container mx-auto px-4">
@@ -108,7 +114,8 @@ const PhotoGallery = () => {
           {filteredItems.map((item) => (
             <Card 
               key={item.id} 
-              className="group overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0"
+              className="group overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 cursor-pointer"
+              onClick={() => handleItemClick(item)}
             >
               <div className="relative overflow-hidden">
                 <img
@@ -123,11 +130,16 @@ const PhotoGallery = () => {
                     {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
                   </Badge>
                 </div>
+
+                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ExternalLink className="h-5 w-5 text-white" />
+                </div>
               </div>
 
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-green-800 mb-2 group-hover:text-green-600 transition-colors">
+                <h3 className="text-xl font-bold text-green-800 mb-2 group-hover:text-green-600 transition-colors flex items-center gap-2">
                   {item.title}
+                  <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </h3>
                 
                 <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
