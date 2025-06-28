@@ -16,10 +16,10 @@ const HeroSection = () => {
         {/* Main Title */}
         <div className="mb-8 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-orange-200 bg-clip-text text-transparent">
-            Indian Cricket
+            Cric Legends
           </h1>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-orange-300">
-            Legends Hub
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-orange-300">
+            Indian Cricket Hub
           </h2>
           <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto leading-relaxed">
             Celebrating 75+ years of Indian cricket excellence - From legends of the past to stars of today

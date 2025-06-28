@@ -26,6 +26,9 @@ const Index = () => {
 
   const featuredPlayers = players.filter(player => player.featured).slice(0, 6);
 
+  // Only show players if there's a search term or filters applied
+  const shouldShowPlayers = searchTerm.trim() !== "" || selectedEra !== "all" || selectedFormat !== "all";
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       <HeroSection />
@@ -111,7 +114,7 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-green-800 mb-4">All Indian Cricket Players</h2>
             <p className="text-lg text-gray-600">
-              From 1950 to 2025 - Every player who represented India
+              From 1950 to 2025 - Search to discover players who represented India
             </p>
           </div>
 
@@ -153,16 +156,30 @@ const Index = () => {
             </Select>
           </div>
 
-          {/* Players Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredPlayers.map((player) => (
-              <PlayerCard key={player.id} player={player} />
-            ))}
-          </div>
-
-          {filteredPlayers.length === 0 && (
+          {/* Players Grid - Only show when searching */}
+          {shouldShowPlayers ? (
+            <>
+              {filteredPlayers.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {filteredPlayers.map((player) => (
+                    <PlayerCard key={player.id} player={player} />
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <p className="text-lg text-gray-600">No players found matching your criteria.</p>
+                </div>
+              )}
+            </>
+          ) : (
             <div className="text-center py-12">
-              <p className="text-lg text-gray-600">No players found matching your criteria.</p>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
+                <Search className="h-16 w-16 mx-auto mb-4 text-green-600" />
+                <h3 className="text-2xl font-bold text-green-800 mb-4">Discover Cricket Legends</h3>
+                <p className="text-lg text-gray-600">
+                  Use the search bar above to find your favorite Indian cricket players from different eras and formats.
+                </p>
+              </div>
             </div>
           )}
         </div>
@@ -199,7 +216,7 @@ const Index = () => {
             <div className="border-t border-white/20 pt-8">
               <div className="flex items-center justify-center gap-2 text-green-200">
                 <Copyright className="h-4 w-4" />
-                <span>2024 Indian Cricket Legends Hub. All rights reserved.</span>
+                <span>2024 Cric Legends. All rights reserved.</span>
               </div>
               <p className="mt-2 text-sm text-green-300">
                 Celebrating the legacy of Indian cricket and its legendary players
